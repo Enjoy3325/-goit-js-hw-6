@@ -25,3 +25,24 @@ button {
 ul {
   list-style: none;
 }
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+.itemImg {
+margin: 0 auto;
+
+}
+.img-picture {
+display: block;
+border-radius: 25px;
+cursor: pointer;
+filter: sepia(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+
+}
+.img-picture:hover,
+.img-picture:focus {
+  filter: sepia(0);
+}
