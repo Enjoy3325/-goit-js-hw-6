@@ -12,5 +12,5 @@ function onBlurInput(e) {
     }
 }
 
-// console.log(Number(validationInput.dataset.length));
+console.log(Number(validationInput.dataset.length));
 // console.log(e.target.value.length);
