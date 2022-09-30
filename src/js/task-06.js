@@ -7,8 +7,10 @@ function onBlurInput(e) {
     validationInput.classList.remove('valid', 'invalid')
     if (Number(validationInput.dataset.length) === e.target.value.length ) {
         validationInput.classList.add('valid');
+        alert('✅ Correctly entered!')
     } else {
         validationInput.classList.add('invalid');
+        alert('❌ The input is wrong! Try again.')
     }
 }
 
