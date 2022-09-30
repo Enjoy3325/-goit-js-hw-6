@@ -1,4 +1,4 @@
-
+// queries from HTML to DOM JS
 const refs = {
   inputNumber: document.querySelector('input[type="number"]'),
   createBtn: document.querySelector('button[data-create]'),
@@ -6,44 +6,44 @@ const refs = {
   newBox: document.querySelector('#boxes'),
 }
 // Variables
-let amount = 0;
- let basicSize = 30;
- let size = 0;
- 
+  let amount = 0;
+  let basicSize = 30;
+  let size = 0;
+
 // Listeners
 refs.inputNumber.addEventListener('input', onInputNumber);
 refs.createBtn.addEventListener('click', () =>  createBoxes(amount));
 refs.destroyBtn.addEventListener('click', destroyBoxes);
 
 function onInputNumber(e) {
- console.log(e.currentTarget.value);
- amount = Number(e.currentTarget.value);
+  console.log(e.currentTarget.value);
+  amount = Number(e.currentTarget.value);
 }
 
 //  Button Create collor box 
 function createBoxes(amount) {
   const divBoxes = [];
   for (let i = 1; i <= amount; i += 1) {
-
-     size = basicSize + i * 10;
+    size += 10;
     const divBox = document.createElement('div');
     divBox.style.width = `${size}px`;
     divBox.style.height = `${size}px`;
     divBox.style.backgroundColor = `${getRandomHexColor()}`;
     divBoxes.push(divBox);
+  
     //  console.log(divBoxes);
   
   }
   console.log(amount);
     console.log(divBoxes);
- refs.newBox.append(...divBoxes);
+  refs.newBox.append(...divBoxes);
 }
 
 //  Button Destroy box
 function destroyBoxes() {
-   refs.newBox.innerHTML = '';
+  refs.newBox.innerHTML = '';
 }
-
+// Randomaizer color the formula
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
