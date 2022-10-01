@@ -24,7 +24,7 @@ function onInputNumber(e) {
 function createBoxes(amount) {
   const divBoxes = [];
   for (let i = 1; i <= amount; i += 1) {
-    size += 10;
+    size += 30;
     const divBox = document.createElement('div');
     divBox.style.width = `${size}px`;
     divBox.style.height = `${size}px`;
