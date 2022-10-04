@@ -7,8 +7,8 @@ const refs = {
 }
 // Variables
   let amount = 0;
-  let basicSize = 30;
-  let size = 0;
+  let basicSize = 20;
+
 
 // Listeners
 refs.inputNumber.addEventListener('input', onInputNumber);
@@ -24,10 +24,12 @@ function onInputNumber(e) {
 function createBoxes(amount) {
   const divBoxes = [];
   for (let i = 1; i <= amount; i += 1) {
-    size += 30;
+  basicSize += 10;
+  
+    
     const divBox = document.createElement('div');
-    divBox.style.width = `${size}px`;
-    divBox.style.height = `${size}px`;
+    divBox.style.width = `${basicSize}px`;
+    divBox.style.height = `${basicSize}px`;
     divBox.style.backgroundColor = `${getRandomHexColor()}`;
     divBoxes.push(divBox);
   
